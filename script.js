@@ -68,13 +68,13 @@
   }
 
   // hero slideshow (foreground embossed frame + blurred background in sync)
-  var fg = document.querySelectorAll('.showcase .s'), bgs = document.querySelectorAll('.hero .slides .s'),
-      dots = document.querySelectorAll('.dots button'), cap = document.querySelector('.showcase .cap'), cur = 0, timer;
+  var fg0 = document.querySelectorAll('.showcase .s'), bgs = document.querySelectorAll('.hero .slides .s'),
+      dots = document.querySelectorAll('.dots button'), cap = document.querySelector('.showcase .cap'), cur = 0, timer, fg = fg0.length ? fg0 : document.querySelectorAll('.hero .slides .s');
   function go(n){
     if (!fg.length) return;
     cur = (n + fg.length) % fg.length;
     [fg, bgs, dots].forEach(function(list){ list.forEach(function(el, k){ el.classList.toggle('on', k === cur); }); });
-    if (cap) cap.innerHTML = fg[cur].dataset.cap || '';
+    if (cap && fg0.length) cap.innerHTML = fg[cur].dataset.cap || '';
     dots.forEach(function(d, k){ d.setAttribute('aria-selected', k === cur); });
   }
   function play(){ clearInterval(timer); if (!reduce) timer = setInterval(function(){ go(cur + 1); }, 5000); }
