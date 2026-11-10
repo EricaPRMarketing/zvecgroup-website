@@ -382,3 +382,15 @@ footer a{color:var(--teal);text-decoration:none}
 .welcome .wtag .w{filter:drop-shadow(0 3px 8px rgba(0,0,0,.6))}
 .welcome .wlogo img{opacity:.95}
 .welcome .veil{background:radial-gradient(ellipse at center,rgba(6,26,45,.2) 0%,rgba(6,26,45,.45) 65%,rgba(6,26,45,.85) 100%),linear-gradient(180deg,transparent 55%,rgba(6,26,45,.55) 85%)}
+/* v3: company buttons, smaller logo, clearer photos */
+.welcome .slides{filter:saturate(1.15) brightness(1)}
+.welcome .veil{background:radial-gradient(ellipse at center,rgba(6,26,45,0) 0%,rgba(6,26,45,.15) 60%,rgba(6,26,45,.6) 100%),linear-gradient(180deg,rgba(6,26,45,.35) 0%,transparent 18%,transparent 55%,rgba(6,26,45,.7) 100%)}
+.welcome .wlogo img{height:clamp(170px,28svh,280px)}
+.welcome .wsmall{text-shadow:0 2px 10px rgba(0,0,0,.85)}
+.wplates{width:100%;max-width:1100px;margin-top:clamp(22px,3.5vw,38px)}
+.wplates .plate{justify-content:center;text-align:left;background:linear-gradient(160deg,rgba(255,255,255,.28),rgba(255,255,255,.08) 45%,rgba(6,26,45,.55))}
+.hero.welcome{padding-block:100px 70px}
+.wcenter{position:relative}
+.wcenter::before{content:"";position:absolute;left:50%;top:50%;width:min(1000px,120%);height:115%;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(6,26,45,.6),rgba(6,26,45,.35) 55%,transparent)}
+.welcome .wsmall{color:#fff}
+.welcome .wtag .w{filter:drop-shadow(0 2px 0 rgba(6,26,45,.7)) drop-shadow(0 6px 14px rgba(0,0,0,.75))}
