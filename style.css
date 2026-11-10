@@ -372,3 +372,13 @@ footer a{color:var(--teal);text-decoration:none}
   text-shadow:-2px -2px 0 rgba(255,255,255,.55),2px 2px 0 rgba(0,0,0,.45),4px 4px 0 rgba(0,0,0,.3),0 20px 40px rgba(0,0,0,.55)}
 .wtag{margin:clamp(14px,2vw,22px) 0 0!important;font:900 clamp(26px,4.4vw,58px)/1.1 Montserrat,sans-serif;text-shadow:none}
 .welcome .scroll-cue{left:50%;right:auto;margin-left:-13px;display:block}
+/* v2: large transparent logo, lighter slideshow */
+.welcome .slides{filter:saturate(1.1) brightness(.8)}
+.welcome .veil{background:radial-gradient(ellipse at center,rgba(6,26,45,.15) 0%,rgba(6,26,45,.4) 65%,rgba(6,26,45,.85) 100%)}
+.welcome .wtitle{margin:0;gap:clamp(14px,2vw,22px)}
+.welcome .wlogo{width:auto;aspect-ratio:auto;padding:0;background:none;box-shadow:none;border-radius:0;animation:bob 6s ease-in-out infinite}
+.welcome .wlogo img{width:auto;height:clamp(240px,42svh,400px);max-width:80vw;object-fit:contain;border-radius:0;opacity:.82;filter:drop-shadow(0 14px 30px rgba(0,0,0,.55)) drop-shadow(0 0 40px rgba(58,214,176,.35))}
+.welcome .wtag{text-shadow:0 4px 18px rgba(0,0,0,.35)}
+.welcome .wtag .w{filter:drop-shadow(0 3px 8px rgba(0,0,0,.6))}
+.welcome .wlogo img{opacity:.95}
+.welcome .veil{background:radial-gradient(ellipse at center,rgba(6,26,45,.2) 0%,rgba(6,26,45,.45) 65%,rgba(6,26,45,.85) 100%),linear-gradient(180deg,transparent 55%,rgba(6,26,45,.55) 85%)}
