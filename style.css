@@ -348,3 +348,8 @@ footer a{color:var(--teal);text-decoration:none}
   .showcase .frame{transform:none}
   .showcase .gloss::after{animation:none}
 }
+/* unit hero with video */
+.uvgrid{grid-template-columns:1.25fr .75fr;align-items:end}
+.uvgrid .ustats{grid-column:1/-1}
+.hvid{justify-self:end;width:min(300px,100%)}
+@media (max-width:860px){.uvgrid{grid-template-columns:1fr}.hvid{justify-self:center;width:min(300px,86%);margin-top:30px}}
